@@ -132,6 +132,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 13902862}
+  - component: {fileID: 13902863}
   m_Layer: 0
   m_Name: Lanes
   m_TagString: Untagged
@@ -154,6 +155,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &13902863
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 13902861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8dc71525d945e4049b43203335d55427, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  midiLocation: Assets/Song MIDIs/Piano-Chromatic-Test.mid
+  notePrefab: {fileID: 1454934909202575750, guid: 4b665c2acd977ee47acdf3d012534993, type: 3}
+  lane1sprite: {fileID: -1715427439, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  lane2sprite: {fileID: -1561731192, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  lane3sprite: {fileID: 325774943, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  lane4sprite: {fileID: -141338183, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
 --- !u!1 &83202508
 GameObject:
   m_ObjectHideFlags: 0
