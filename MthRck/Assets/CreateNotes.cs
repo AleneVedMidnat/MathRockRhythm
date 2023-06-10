@@ -57,8 +57,7 @@ public class CreateNotes : MonoBehaviour
 			//convert time of notestart to realtime
 			MetricTimeSpan timeToWait = TimeConverter.ConvertTo<MetricTimeSpan>(noteStart.Time, tempoMap);
 			float timeInSeconds = timeToWait.Minutes * 60f + timeToWait.Seconds + (float)timeToWait.Milliseconds / 1000f;
-			Debug.Log("second" +timeInSeconds);
-		timeInSeconds -= delayTime * 1.5f; // 1 plus notespeed x 2, dont know why it work but it does 
+		timeInSeconds -= delayTime;// * 1.5f; // 1 plus notespeed x 2, dont know why it work but it does 
 			yield return new WaitForSeconds(timeInSeconds);
 
 			Vector2 spawnPoint = new Vector2(0,0);
