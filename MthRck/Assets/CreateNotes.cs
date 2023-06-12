@@ -19,6 +19,7 @@ public class CreateNotes : MonoBehaviour
 	[SerializeField] Sprite lane3sprite;
 	[SerializeField] Sprite lane4sprite;
 	[SerializeField] AudioSource audio;
+	[SerializeField] AudioSource playAudio;
 	public float delayTime;
 
 	NoteName[] lane1Notes = { NoteName.A, NoteName.ASharp, NoteName.B };
@@ -48,6 +49,7 @@ public class CreateNotes : MonoBehaviour
 			StartCoroutine(SpawnNotes(noteStart));
 		}
 		audio.Play();
+		playAudio.Play();
 	}
 
 	IEnumerator SpawnNotes(TimedEvent noteStart)
@@ -57,7 +59,7 @@ public class CreateNotes : MonoBehaviour
 			//convert time of notestart to realtime
 			MetricTimeSpan timeToWait = TimeConverter.ConvertTo<MetricTimeSpan>(noteStart.Time, tempoMap);
 			float timeInSeconds = timeToWait.Minutes * 60f + timeToWait.Seconds + (float)timeToWait.Milliseconds / 1000f;
-		timeInSeconds -= delayTime;// * 1.5f; // 1 plus notespeed x 2, dont know why it work but it does 
+		timeInSeconds -= delayTime + 0.5f;
 			yield return new WaitForSeconds(timeInSeconds);
 
 			Vector2 spawnPoint = new Vector2(0,0);

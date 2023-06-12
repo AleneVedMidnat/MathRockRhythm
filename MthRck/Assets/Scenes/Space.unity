@@ -4819,6 +4819,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 814334268253734438, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: playAudio
+      value: 
+      objectReference: {fileID: 872230166}
+    - target: {fileID: 814334268253734438, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: midiLocation
       value: Assets/Song MIDIs/Space.mid
       objectReference: {fileID: 0}
@@ -4881,7 +4885,11 @@ PrefabInstance:
     - target: {fileID: 814334268950388931, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1d12f70c6b81c2b42b88ced13bf284a8, type: 3}
+      objectReference: {fileID: 8300000, guid: 4d21ef0bbb6f81147bedbb3062f930d6, type: 3}
+    - target: {fileID: 814334268950388931, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 1056653276878287957, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: m_Volume
       value: 1
@@ -4889,10 +4897,15 @@ PrefabInstance:
     - target: {fileID: 1056653276878287957, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 74d0b6d566e19d340923454df7381121, type: 3}
+      objectReference: {fileID: 8300000, guid: 2c4f5722546e19c4cb4fee848b80f96c, type: 3}
     - target: {fileID: 5828271212712682235, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: lowerVolume
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+--- !u!82 &872230166 stripped
+AudioSource:
+  m_CorrespondingSourceObject: {fileID: 1056653276878287957, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+  m_PrefabInstance: {fileID: 656440328}
+  m_PrefabAsset: {fileID: 0}
