@@ -4811,3 +4811,88 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &656440328
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 814334268253734438, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: midiLocation
+      value: Assets/Song MIDIs/Space.mid
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1.1276973
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -0.54014003
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.060010843
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268370739901, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_Name
+      value: GameplaySystem
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268950388928, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_Name
+      value: Background Music
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268950388931, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_Volume
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268950388931, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 1d12f70c6b81c2b42b88ced13bf284a8, type: 3}
+    - target: {fileID: 1056653276878287957, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_Volume
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1056653276878287957, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 74d0b6d566e19d340923454df7381121, type: 3}
+    - target: {fileID: 5828271212712682235, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: lowerVolume
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}

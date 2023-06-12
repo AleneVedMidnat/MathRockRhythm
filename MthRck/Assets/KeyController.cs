@@ -23,11 +23,13 @@ public class KeyController : MonoBehaviour
 	{
 		activePucks.Remove(collision.gameObject);
 		Destroy(collision.gameObject);
+		scoringEvent?.Invoke("miss");
+		StartCoroutine(KeyPressedColour(new Color32(0xFF, 0x00, 0x00, 0xFF)));
 	}
 
 	public void KeyPressed()
 	{
-		StartCoroutine(KeyPressedColour());
+		Color inputColor = Color.gray;
 		if (activePucks.Any())
 		{
 			//check how far from the tagret it was and return the 
@@ -36,34 +38,35 @@ public class KeyController : MonoBehaviour
 			if (4f < distanceAway && distanceAway <= 5f)
 			{
 				scoringEvent?.Invoke("worst");
-				Debug.Log("worst");
+				inputColor = new Color32(0xFF, 0x00, 0xFF, 0xFF);
 			}
 			else if (3f < distanceAway && distanceAway <= 4f)
 			{
 				scoringEvent?.Invoke("sad");
-				Debug.Log("s");
+				inputColor = new Color32(0x00, 0xFF, 0x00, 0xFF);
 			}
 			else if (2f < distanceAway && distanceAway <= 3f)
 			{
 				scoringEvent?.Invoke("safe");
-				Debug.Log("sa");
+				inputColor = new Color32(0x00, 0xFF, 0x00, 0xFF);
 			}
 			else if (1f < distanceAway && distanceAway <= 2f)
 			{
 				scoringEvent?.Invoke("fine");
-				Debug.Log("f");
+				inputColor = new Color32(0x00, 0x00, 0xFF, 0xFF);
 			}
 			else if (0f <= distanceAway && distanceAway <= 1f)
 			{
 				scoringEvent?.Invoke("cool");
-				Debug.Log("c");
+				inputColor = new Color32(0xFF, 0xFF, 0x00, 0xFF);
 			}
 		}
+		StartCoroutine(KeyPressedColour(inputColor));
 	}
 
-	IEnumerator KeyPressedColour()
+	IEnumerator KeyPressedColour(Color inputColor)
 	{
-		m_spriteRenderer.color = Color.gray;
+		m_spriteRenderer.color = inputColor;
 		yield return new WaitForSeconds(0.2f);
 		m_spriteRenderer.color = Color.white;
 	}

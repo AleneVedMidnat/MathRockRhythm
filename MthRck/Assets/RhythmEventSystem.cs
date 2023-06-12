@@ -12,6 +12,7 @@ public class RhythmEventSystem : MonoBehaviour
 	[SerializeField] KeyController m_lane2;
 	[SerializeField] KeyController m_lane3;
 	[SerializeField] KeyController m_lane4;
+	[SerializeField] TextMeshProUGUI m_achievementText;
 	int playerScore = 0;
 	int playerHealth = 50;
 
@@ -60,20 +61,41 @@ public class RhythmEventSystem : MonoBehaviour
 		{
 			case "worst":
 				playerHealth -= 2;
+				m_achievementText.text = "Worst";
+				m_achievementText.color = new Color32(0xFF, 0x00, 0xFF, 0xFF);
+				//FFFF00
 				break;
 			case "sad":
 				playerHealth -= 1;
+				m_achievementText.text = "Sad";
+				m_achievementText.color = new Color32(0x00, 0xFF, 0x00, 0xFF);
+				//0000FF
 				break;
 			case "safe":
+				m_achievementText.text = "Safe";
+				m_achievementText.color = new Color32(0x00, 0xFF, 0x00, 0xFF);
+				//00FF00
 				break;
 			case "fine":
 				playerHealth += 1;
 				playerScore+= 1;
+				m_achievementText.text = "Fine";
+				m_achievementText.color = new Color32(0x00, 0x00, 0xFF, 0xFF);
+				//00FFFF
 				break;
 			case "cool":
 				playerHealth += 2;
 				playerScore += 2;
+				m_achievementText.text = "Cool";
+				m_achievementText.color = new Color32(0xFF, 0xFF, 0x00, 0xFF);
+				//FF00FF
 				break;
+			case "miss":
+				playerHealth -= 2;
+				m_achievementText.text = "Miss";
+				m_achievementText.color = new Color32(0xFF, 0x00, 0x00, 0xFF);
+				break;
+
 		}
 	}
 
