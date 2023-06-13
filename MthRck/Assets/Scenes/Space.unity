@@ -196,7 +196,7 @@ TilemapRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 2
+  m_SortingOrder: 3
   m_ChunkSize: {x: 32, y: 32, z: 32}
   m_ChunkCullingBounds: {x: 0, y: 0, z: 0}
   m_MaxChunkCount: 16
@@ -4898,6 +4898,18 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: 2c4f5722546e19c4cb4fee848b80f96c, type: 3}
+    - target: {fileID: 1980001528664477904, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -219.21002
+      objectReference: {fileID: 0}
+    - target: {fileID: 1980001528664477904, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: 0.00012207031
+      objectReference: {fileID: 0}
+    - target: {fileID: 2589586292754270660, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_AnchoredPosition.y
+      value: -0.46002197
+      objectReference: {fileID: 0}
     - target: {fileID: 5828271212712682235, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: lowerVolume
       value: 0
