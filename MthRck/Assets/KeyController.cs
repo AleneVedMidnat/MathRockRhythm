@@ -35,27 +35,27 @@ public class KeyController : MonoBehaviour
 			//check how far from the tagret it was and return the 
 			float distanceAway = (activePucks[0].transform.position- transform.position).magnitude;
 			Destroy(activePucks[0]);
-			if (4f < distanceAway && distanceAway <= 5f)
+			if (4.5f < distanceAway && distanceAway <= 5f)
 			{
 				scoringEvent?.Invoke("worst");
 				inputColor = new Color32(0xFF, 0x00, 0xFF, 0xFF);
 			}
-			else if (3f < distanceAway && distanceAway <= 4f)
+			else if (3.5f < distanceAway && distanceAway <= 4.5f)
 			{
 				scoringEvent?.Invoke("sad");
 				inputColor = new Color32(0x00, 0xFF, 0x00, 0xFF);
 			}
-			else if (2f < distanceAway && distanceAway <= 3f)
+			else if (2.5f < distanceAway && distanceAway <= 3.5f)
 			{
 				scoringEvent?.Invoke("safe");
 				inputColor = new Color32(0x00, 0xFF, 0x00, 0xFF);
 			}
-			else if (1f < distanceAway && distanceAway <= 2f)
+			else if (1.5f < distanceAway && distanceAway <= 2.5f)
 			{
 				scoringEvent?.Invoke("fine");
 				inputColor = new Color32(0x00, 0x00, 0xFF, 0xFF);
 			}
-			else if (0f <= distanceAway && distanceAway <= 1f)
+			else if (0f <= distanceAway && distanceAway <= 1.5f)
 			{
 				scoringEvent?.Invoke("cool");
 				inputColor = new Color32(0xFF, 0xFF, 0x00, 0xFF);
