@@ -99,6 +99,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movementSpeed: 0.25
+  particleEffect: {fileID: 1664810852190647742, guid: c635dcb774a7d6f45abd1104370ad783, type: 3}
 --- !u!61 &5884464036018645122
 BoxCollider2D:
   m_ObjectHideFlags: 0

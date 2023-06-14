@@ -5637,6 +5637,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 814334268253734438, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: midiLocation
+      value: Assets/Song MIDIs/forest.mid
+      objectReference: {fileID: 0}
     - target: {fileID: 814334268370739900, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -5685,6 +5689,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: GameplaySystem
       objectReference: {fileID: 0}
+    - target: {fileID: 814334268950388931, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: ef4a33a71b5d8a74bb4371ef3601dd39, type: 3}
+    - target: {fileID: 1056653276878287957, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: 83ce6f52718a83b4ebf60d1139aaf883, type: 3}
     - target: {fileID: 1159766948609576356, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: m_Size.x
       value: 0.8
