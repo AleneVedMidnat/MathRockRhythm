@@ -7,6 +7,11 @@ public class MovePuck : MonoBehaviour
 	[SerializeField] float movementSpeed;
 	[SerializeField] GameObject particleEffect;
 	// Start is called before the first frame update
+
+	private void Start()
+	{
+		RhythmEventSystem.endSong += EndSong;
+	}
 	private void FixedUpdate()
 	{
 		transform.position = new Vector3(transform.position.x, transform.position.y - movementSpeed, transform.position.z);
@@ -15,5 +20,10 @@ public class MovePuck : MonoBehaviour
 	private void OnDestroy()
 	{
 		Instantiate(particleEffect, transform.position, Quaternion.identity);
+	}
+
+	private void EndSong(bool end)
+	{
+		Destroy(this);
 	}
 }

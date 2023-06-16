@@ -22,6 +22,7 @@ public class CreateNotes : MonoBehaviour
 	[SerializeField] AudioSource playAudio;
 	public float delayTime;
 	float beforetime;
+	public bool stopSong = false;
 
 	NoteName[] lane1Notes = { NoteName.A, NoteName.ASharp, NoteName.B };
 	NoteName[] lane2Notes = { NoteName.C, NoteName.CSharp, NoteName.D };
@@ -52,6 +53,14 @@ public class CreateNotes : MonoBehaviour
 		}
 		audio.Play();
 		playAudio.Play();
+
+		RhythmEventSystem.endSong += EndSong;
+	}
+
+	void EndSong(bool end)
+	{
+		stopSong = end;
+		StopAllCoroutines();
 	}
 
 	IEnumerator SpawnNotes(TimedEvent noteStart)
@@ -63,6 +72,10 @@ public class CreateNotes : MonoBehaviour
 			float timeInSeconds = timeToWait.Minutes * 60f + timeToWait.Seconds + (float)timeToWait.Milliseconds / 1000f;
 		timeInSeconds -= delayTime + (Time.timeSinceLevelLoad - beforetime); //(5f/ (0.25f *50f)));
 		yield return new WaitForSeconds(timeInSeconds);
+		if (stopSong == true)
+		{
+			yield break;
+		}
 
 			Vector2 spawnPoint = new Vector2(0,0);
 			Sprite currentSprite = lane1sprite;

@@ -13,11 +13,22 @@ public class RhythmEventSystem : MonoBehaviour
 	[SerializeField] KeyController m_lane3;
 	[SerializeField] KeyController m_lane4;
 	[SerializeField] TextMeshProUGUI m_achievementText;
+	[SerializeField] GameObject gameplayUI;
+	[SerializeField] GameObject scoreUI;
+	[SerializeField] AudioSource backgroundAudio;
 	int playerScore = 0;
 	int playerHealth = 50;
+	int cool = 0;
+	int fine = 0;
+	int safe = 0;
+	int sad = 0;
+	int worst = 0;
+	int miss = 0;
 
-    // Start is called before the first frame update
-    void Start()
+	public static event System.Action<bool> endSong;
+
+	// Start is called before the first frame update
+	void Start()
     {
         m_input= GetComponent<PlayerInput>();
 		m_input.currentActionMap.FindAction("Lane1").performed += Lane1;
@@ -26,6 +37,15 @@ public class RhythmEventSystem : MonoBehaviour
 		m_input.currentActionMap.FindAction("Lane4").performed += Lane4;
 
 		KeyController.scoringEvent += ScoreEvent;
+		StartCoroutine(SongEnd());
+	}
+
+	IEnumerator SongEnd()
+	{
+		yield return new WaitForSeconds(backgroundAudio.clip.length);
+		gameplayUI.SetActive(false);
+		scoreUI.SetActive(true);
+		scoreUI.GetComponent<ShowScoreUI>().DisplayScoreUI(playerScore, cool, fine, safe, sad, worst, miss, true);
 	}
 
 	#region InputEvents
@@ -61,17 +81,20 @@ public class RhythmEventSystem : MonoBehaviour
 		{
 			case "worst":
 				playerHealth -= 2;
+				worst++;
 				m_achievementText.text = "Worst";
 				m_achievementText.color = new Color32(0xFF, 0x00, 0xFF, 0xFF);
 				//FFFF00
 				break;
 			case "sad":
 				playerHealth -= 1;
+				sad++;
 				m_achievementText.text = "Sad";
 				m_achievementText.color = new Color32(0x00, 0xFF, 0x00, 0xFF);
 				//0000FF
 				break;
 			case "safe":
+				safe++;
 				m_achievementText.text = "Safe";
 				m_achievementText.color = new Color32(0x00, 0xFF, 0x00, 0xFF);
 				//00FF00
@@ -79,6 +102,7 @@ public class RhythmEventSystem : MonoBehaviour
 			case "fine":
 				playerHealth += 1;
 				playerScore+= 1;
+				fine++;
 				m_achievementText.text = "Fine";
 				m_achievementText.color = new Color32(0x00, 0x00, 0xFF, 0xFF);
 				//00FFFF
@@ -86,18 +110,31 @@ public class RhythmEventSystem : MonoBehaviour
 			case "cool":
 				playerHealth += 2;
 				playerScore += 2;
+				cool++;
 				m_achievementText.text = "Cool";
 				m_achievementText.color = new Color32(0xFF, 0xFF, 0x00, 0xFF);
 				//FF00FF
 				break;
 			case "miss":
 				playerHealth -= 2;
+				miss++;
 				m_achievementText.text = "Miss";
 				m_achievementText.color = new Color32(0xFF, 0x00, 0x00, 0xFF);
 				break;
 
 		}
+		if (playerHealth <= 0)
+		{
+			FindObjectOfType<AudioSource>().Stop();
+			gameplayUI.SetActive(false);
+			scoreUI.SetActive(true);
+			scoreUI.GetComponent<ShowScoreUI>().DisplayScoreUI(playerScore, cool, fine, safe, sad, worst, miss, true);
+			endSong?.Invoke(true);
+			
+		}
 	}
+
+	
 
 	#endregion
 }

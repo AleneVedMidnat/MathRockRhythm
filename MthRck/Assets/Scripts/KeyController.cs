@@ -1,3 +1,4 @@
+using Melanchall.DryWetMidi.Core;
 using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
@@ -22,9 +23,12 @@ public class KeyController : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		activePucks.Remove(collision.gameObject);
+		if (collision.gameObject.transform.position.y < transform.position.y - 4)
+		{
+			scoringEvent?.Invoke("miss");
+			StartCoroutine(KeyPressedColour(new Color32(0xFF, 0x00, 0x00, 0xFF)));
+		}
 		Destroy(collision.gameObject);
-		scoringEvent?.Invoke("miss");
-		StartCoroutine(KeyPressedColour(new Color32(0xFF, 0x00, 0x00, 0xFF)));
 	}
 
 	public void KeyPressed()
