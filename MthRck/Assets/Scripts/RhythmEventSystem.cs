@@ -45,7 +45,7 @@ public class RhythmEventSystem : MonoBehaviour
 		yield return new WaitForSeconds(backgroundAudio.clip.length);
 		gameplayUI.SetActive(false);
 		scoreUI.SetActive(true);
-		scoreUI.GetComponent<ShowScoreUI>().DisplayScoreUI(playerScore, cool, fine, safe, sad, worst, miss, true);
+		scoreUI.GetComponent<ShowScoreUI>().DisplayScoreUI(playerScore, cool, fine, safe, sad, worst, miss, false);
 	}
 
 	#region InputEvents

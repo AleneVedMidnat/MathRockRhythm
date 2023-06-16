@@ -16,21 +16,21 @@ public class ShowScoreUI : MonoBehaviour
 
 	public void DisplayScoreUI(int playerScore, int coolScore, int fineScore, int safeScore, int sadScore, int worstScore, int missScore, bool levelFail)
 	{
-		float maxscore = ((coolScore + fineScore + safeScore + sadScore + worstScore + missScore) * 1.5f) /100f;
+		float maxscore = ((coolScore + fineScore + safeScore + sadScore + worstScore + missScore) * 1.5f);
 		//decide rank based on score 
-		if (playerScore < maxscore * 40 || levelFail == true)
+		if (playerScore < maxscore * 0.4 || levelFail == true)
 		{
 			rankScoreUI.text = "Fail";
 		}
-		else if (playerScore < maxscore * 50)
+		else if (playerScore < maxscore * 0.5)
 		{
 			rankScoreUI.text = "Third-Class";
 		}
-		else if (playerScore < maxscore * 60)
+		else if (playerScore < maxscore * 0.6)
 		{
 			rankScoreUI.text = "Lower Second-Class";
 		}
-		else if (playerScore < maxscore * 70)
+		else if (playerScore < maxscore * 0.7)
 		{
 			rankScoreUI.text = "Upper Second-Class";
 		}
