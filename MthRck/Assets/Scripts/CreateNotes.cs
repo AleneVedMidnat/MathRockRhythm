@@ -14,15 +14,16 @@ public class CreateNotes : MonoBehaviour
 	TempoMap tempoMap;
 	List<TimedEvent> noteOnEvents;
 	[SerializeField] GameObject notePrefab;
-	[SerializeField] Sprite lane1sprite;
-	[SerializeField] Sprite lane2sprite;
-	[SerializeField] Sprite lane3sprite;
-	[SerializeField] Sprite lane4sprite;
+	[SerializeField] Sprite[] lane1sprite;
+	[SerializeField] Sprite[] lane2sprite;
+	[SerializeField] Sprite[] lane3sprite;
+	[SerializeField] Sprite[] lane4sprite;
 	[SerializeField] AudioSource audio;
 	[SerializeField] AudioSource playAudio;
 	public float delayTime;
 	float beforetime;
 	public bool stopSong = false;
+	int currentInputSettings;
 
 	NoteName[] lane1Notes = { NoteName.A, NoteName.ASharp, NoteName.B };
 	NoteName[] lane2Notes = { NoteName.C, NoteName.CSharp, NoteName.D };
@@ -55,6 +56,7 @@ public class CreateNotes : MonoBehaviour
 		playAudio.Play();
 
 		RhythmEventSystem.endSong += EndSong;
+		currentInputSettings = PlayerPrefs.GetInt("InputSettings");
 	}
 
 	void EndSong(bool end)
@@ -78,28 +80,28 @@ public class CreateNotes : MonoBehaviour
 		}
 
 			Vector2 spawnPoint = new Vector2(0,0);
-			Sprite currentSprite = lane1sprite;
+			Sprite currentSprite = lane1sprite[currentInputSettings];
 			if (noteStart.Event is NoteOnEvent nameCheck)
 			{
 				if (lane1Notes.Contains<NoteName>(nameCheck.GetNoteName()))
 				{
 					spawnPoint = new Vector2(-3, 11);
-					currentSprite = lane1sprite;
+					currentSprite = lane1sprite[currentInputSettings];
 				}
 				else if (lane2Notes.Contains<NoteName>(nameCheck.GetNoteName()))
 				{
 					spawnPoint = new Vector2(-1, 11);
-					currentSprite = lane2sprite;
+					currentSprite = lane2sprite[currentInputSettings];
 				}
 				else if (lane3Notes.Contains<NoteName>(nameCheck.GetNoteName()))
 				{
 					spawnPoint = new Vector2(1, 11);
-					currentSprite = lane3sprite;
+					currentSprite = lane3sprite[currentInputSettings];
 				}
 				else if (lane4Notes.Contains<NoteName>(nameCheck.GetNoteName()))
 				{
 					spawnPoint = new Vector2(3, 11);
-					currentSprite = lane4sprite;
+					currentSprite = lane4sprite[currentInputSettings];
 				}
 			}
 			GameObject newNote = Instantiate(notePrefab, spawnPoint, Quaternion.identity);

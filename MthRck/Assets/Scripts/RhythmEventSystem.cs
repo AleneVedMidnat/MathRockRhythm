@@ -12,6 +12,11 @@ public class RhythmEventSystem : MonoBehaviour
 	[SerializeField] KeyController m_lane2;
 	[SerializeField] KeyController m_lane3;
 	[SerializeField] KeyController m_lane4;
+	[SerializeField] Sprite[] line1Sprites;
+	[SerializeField] Sprite[] line2Sprites;
+	[SerializeField] Sprite[] line3Sprites;
+	[SerializeField] Sprite[] line4Sprites;
+	[SerializeField] InputActionAsset[] inputs;
 	[SerializeField] TextMeshProUGUI m_achievementText;
 	[SerializeField] GameObject gameplayUI;
 	[SerializeField] GameObject scoreUI;
@@ -35,6 +40,13 @@ public class RhythmEventSystem : MonoBehaviour
 		m_input.currentActionMap.FindAction("Lane2").performed += Lane2;
 		m_input.currentActionMap.FindAction("Lane3").performed += Lane3;
 		m_input.currentActionMap.FindAction("Lane4").performed += Lane4;
+
+		int inputSet = PlayerPrefs.GetInt("InputSettings");
+		m_lane1.gameObject.GetComponent<SpriteRenderer>().sprite = line1Sprites[inputSet];
+		m_lane2.gameObject.GetComponent<SpriteRenderer>().sprite = line2Sprites[inputSet];
+		m_lane3.gameObject.GetComponent<SpriteRenderer>().sprite = line3Sprites[inputSet];
+		m_lane4.gameObject.GetComponent<SpriteRenderer>().sprite = line4Sprites[inputSet];
+		m_input.actions = inputs[inputSet];
 
 		KeyController.scoringEvent += ScoreEvent;
 		StartCoroutine(SongEnd());

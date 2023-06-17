@@ -147,13 +147,26 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   midiLocation: Assets/Song MIDIs/Cave.mid
   notePrefab: {fileID: 1454934909202575750, guid: 4b665c2acd977ee47acdf3d012534993, type: 3}
-  lane1sprite: {fileID: -1715427439, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
-  lane2sprite: {fileID: -1561731192, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
-  lane3sprite: {fileID: 325774943, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
-  lane4sprite: {fileID: -141338183, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  lane1sprite:
+  - {fileID: -464107106, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -773694088, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: 1923535844, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
+  lane2sprite:
+  - {fileID: -63443439, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: 1882235729, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -1962283253, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
+  lane3sprite:
+  - {fileID: 650780404, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -492177584, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -90155222, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
+  lane4sprite:
+  - {fileID: -1634090148, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: 372551319, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -1627690449, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
   audio: {fileID: 814334268950388931}
   playAudio: {fileID: 1056653276878287957}
   delayTime: 0
+  stopSong: 0
 --- !u!1 &814334268370739901
 GameObject:
   m_ObjectHideFlags: 0
@@ -212,6 +225,26 @@ MonoBehaviour:
   m_lane2: {fileID: 8937297984824985560}
   m_lane3: {fileID: 8937297984065871823}
   m_lane4: {fileID: 8937297983572039198}
+  line1Sprites:
+  - {fileID: -464107106, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -773694088, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: 1923535844, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
+  line2Sprites:
+  - {fileID: -63443439, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: 1882235729, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -1962283253, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
+  line3Sprites:
+  - {fileID: 650780404, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -492177584, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -90155222, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
+  line4Sprites:
+  - {fileID: -1634090148, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: 103542537, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
+  - {fileID: -1627690449, guid: 024bd42a4f39a314c9bfde0a5c86bc57, type: 3}
+  inputs:
+  - {fileID: -944628639613478452, guid: bcb67255ca8e3ed418cc5850078d3fdb, type: 3}
+  - {fileID: -944628639613478452, guid: bcb67255ca8e3ed418cc5850078d3fdb, type: 3}
+  - {fileID: -944628639613478452, guid: bcb67255ca8e3ed418cc5850078d3fdb, type: 3}
   m_achievementText: {fileID: 6905343160469732990}
   gameplayUI: {fileID: 145199016986918136}
   scoreUI: {fileID: 4084516454257439543}
