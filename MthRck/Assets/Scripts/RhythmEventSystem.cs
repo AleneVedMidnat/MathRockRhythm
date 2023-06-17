@@ -144,6 +144,10 @@ public class RhythmEventSystem : MonoBehaviour
 			endSong?.Invoke(true);
 			
 		}
+		if (playerHealth > 100)
+		{
+			playerHealth = 100;
+		}
 	}
 
 	
