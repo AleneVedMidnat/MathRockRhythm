@@ -10,7 +10,7 @@ public class KeyController : MonoBehaviour
 	public static event System.Action<string> scoringEvent; //Cool, Fine, Safe, Sad, Worst
 	SpriteRenderer m_spriteRenderer;
 
-	void Start()
+	void OnEnable()
     {
         activePucks= new List<GameObject>();
 		m_spriteRenderer = GetComponent<SpriteRenderer>();

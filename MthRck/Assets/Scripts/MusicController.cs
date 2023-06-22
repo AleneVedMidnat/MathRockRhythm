@@ -17,6 +17,7 @@ public class MusicController : MonoBehaviour
 	// Update is called once per frame
 	void ScoreEvent(string score)
 	{
+		
 		switch (score)
 		{
 			case "worst":

@@ -1,9 +1,7 @@
 using System.Collections;
-using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.Windows;
 
 public class RhythmEventSystem : MonoBehaviour
 {
@@ -16,8 +14,9 @@ public class RhythmEventSystem : MonoBehaviour
 	[SerializeField] GameObject gameplayUI;
 	[SerializeField] GameObject scoreUI;
 	[SerializeField] AudioSource backgroundAudio;
+	[SerializeField] GameObject healthbar;
 	int playerScore = 0;
-	int playerHealth = 50;
+	int playerHealth;
 	int cool = 0;
 	int fine = 0;
 	int safe = 0;
@@ -28,7 +27,7 @@ public class RhythmEventSystem : MonoBehaviour
 	public static event System.Action<bool> endSong;
 
 	// Start is called before the first frame update
-	void Start()
+	void OnEnable()
     {
         m_input= GetComponent<PlayerInput>();
 		m_input.currentActionMap.FindAction("Lane1").performed += Lane1;
@@ -38,6 +37,7 @@ public class RhythmEventSystem : MonoBehaviour
 
 		KeyController.scoringEvent += ScoreEvent;
 		StartCoroutine(SongEnd());
+		playerHealth = 25;
 	}
 
 	IEnumerator SongEnd()
@@ -132,6 +132,12 @@ public class RhythmEventSystem : MonoBehaviour
 			endSong?.Invoke(true);
 			
 		}
+		else if (playerHealth > 50)
+		{
+			playerHealth = 50;
+		}
+		healthbar.transform.localScale = new Vector3(healthbar.transform.localScale.x, playerHealth / 50f, healthbar.transform.localScale.z);
+		
 	}
 
 	
