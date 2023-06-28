@@ -11,7 +11,13 @@ public class MusicController : MonoBehaviour
 	private void Start()
 	{
 		m_playAudio = GetComponent<AudioSource>();
-		KeyController.scoringEvent += ScoreEvent;
+		KeyController[] newcontr = FindObjectsOfType<KeyController>();
+		for (int i = 0; i < newcontr.Length; i++)
+		{
+			newcontr[i].scoringEvent += ScoreEvent;
+		}
+		//for (int i = 0;
+		//KeyController.scoringEvent += ScoreEvent;
 	}
 
 	// Update is called once per frame

@@ -3,11 +3,12 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class KeyController : MonoBehaviour
 {
 	List<GameObject> activePucks;
-	public static event System.Action<string> scoringEvent; //Cool, Fine, Safe, Sad, Worst
+	public event System.Action<string> scoringEvent; //Cool, Fine, Safe, Sad, Worst
 	SpriteRenderer m_spriteRenderer;
 
 	void OnEnable()
@@ -25,7 +26,7 @@ public class KeyController : MonoBehaviour
 		activePucks.Remove(collision.gameObject);
 		if (collision.gameObject.transform.position.y < transform.position.y - 4)
 		{
-			scoringEvent?.Invoke("miss");
+			scoringEvent?.Invoke("miss"); // it cant call miss
 			StartCoroutine(KeyPressedColour(new Color32(0xFF, 0x00, 0x00, 0xFF)));
 		}
 		Destroy(collision.gameObject);

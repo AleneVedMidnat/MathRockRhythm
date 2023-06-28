@@ -35,7 +35,11 @@ public class RhythmEventSystem : MonoBehaviour
 		m_input.currentActionMap.FindAction("Lane3").performed += Lane3;
 		m_input.currentActionMap.FindAction("Lane4").performed += Lane4;
 
-		KeyController.scoringEvent += ScoreEvent;
+		//KeyController.scoringEvent += ScoreEvent;
+		m_lane1.scoringEvent+= ScoreEvent;
+		m_lane2.scoringEvent+= ScoreEvent;
+		m_lane3.scoringEvent+= ScoreEvent;
+		m_lane4.scoringEvent+= ScoreEvent;
 		StartCoroutine(SongEnd());
 		playerHealth = 25;
 	}
