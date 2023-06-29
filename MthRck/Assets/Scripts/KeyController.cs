@@ -24,7 +24,7 @@ public class KeyController : MonoBehaviour
 	private void OnTriggerExit2D(Collider2D collision)
 	{
 		activePucks.Remove(collision.gameObject);
-		if (collision.gameObject.transform.position.y < transform.position.y - 4)
+		if (collision.gameObject.transform.position.y < transform.position.y - 2)
 		{
 			scoringEvent?.Invoke("miss"); // it cant call miss
 			StartCoroutine(KeyPressedColour(new Color32(0xFF, 0x00, 0x00, 0xFF)));
@@ -40,27 +40,27 @@ public class KeyController : MonoBehaviour
 			//check how far from the tagret it was and return the 
 			float distanceAway = (activePucks[0].transform.position- transform.position).magnitude;
 			Destroy(activePucks[0]);
-			if (4.5f < distanceAway && distanceAway <= 5f)
+			if (4.0f < distanceAway && distanceAway <= 5f)
 			{
 				scoringEvent?.Invoke("worst");
 				inputColor = new Color32(0xFF, 0x00, 0xFF, 0xFF);
 			}
-			else if (3.5f < distanceAway && distanceAway <= 4.5f)
+			else if (3.0f < distanceAway && distanceAway <= 4.0f)
 			{
 				scoringEvent?.Invoke("sad");
 				inputColor = new Color32(0x00, 0xFF, 0x00, 0xFF);
 			}
-			else if (2.5f < distanceAway && distanceAway <= 3.5f)
+			else if (2.0f < distanceAway && distanceAway <= 3.0f)
 			{
 				scoringEvent?.Invoke("safe");
 				inputColor = new Color32(0x00, 0xFF, 0x00, 0xFF);
 			}
-			else if (1.5f < distanceAway && distanceAway <= 2.5f)
+			else if (1.0f < distanceAway && distanceAway <= 2.0f)
 			{
 				scoringEvent?.Invoke("fine");
 				inputColor = new Color32(0x00, 0x00, 0xFF, 0xFF);
 			}
-			else if (0f <= distanceAway && distanceAway <= 1.5f)
+			else if (0f <= distanceAway && distanceAway <= 1.0f)
 			{
 				scoringEvent?.Invoke("cool");
 				inputColor = new Color32(0xFF, 0xFF, 0x00, 0xFF);

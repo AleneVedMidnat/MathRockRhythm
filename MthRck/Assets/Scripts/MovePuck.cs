@@ -1,3 +1,4 @@
+using Melanchall.DryWetMidi.Interaction;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -10,7 +11,7 @@ public class MovePuck : MonoBehaviour
 
 	private void Start()
 	{
-		RhythmEventSystem.endSong += EndSong;
+		FindObjectOfType<RhythmEventSystem>().endSong += EndSong;
 	}
 	private void FixedUpdate()
 	{

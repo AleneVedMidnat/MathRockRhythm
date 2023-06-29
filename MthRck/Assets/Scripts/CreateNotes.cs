@@ -54,7 +54,7 @@ public class CreateNotes : MonoBehaviour
 		audio.Play();
 		playAudio.Play();
 
-		RhythmEventSystem.endSong += EndSong;
+		FindObjectOfType<RhythmEventSystem>().endSong += EndSong;
 	}
 
 	void EndSong(bool end)

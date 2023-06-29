@@ -24,7 +24,7 @@ public class RhythmEventSystem : MonoBehaviour
 	int worst = 0;
 	int miss = 0;
 
-	public static event System.Action<bool> endSong;
+	public event System.Action<bool> endSong;
 
 	// Start is called before the first frame update
 	void OnEnable()
@@ -129,7 +129,12 @@ public class RhythmEventSystem : MonoBehaviour
 		}
 		if (playerHealth <= 0)
 		{
-			FindObjectOfType<AudioSource>().Stop();
+			AudioSource[] audios = FindObjectsOfType<AudioSource>();
+			for (int i = 0; i < audios.Length; i++)
+			{
+				audios[i].Stop();
+			}
+			//FindObjectOfType<AudioSource>().Stop();
 			gameplayUI.SetActive(false);
 			scoreUI.SetActive(true);
 			scoreUI.GetComponent<ShowScoreUI>().DisplayScoreUI(playerScore, cool, fine, safe, sad, worst, miss, true);
