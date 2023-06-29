@@ -5705,5 +5705,44 @@ PrefabInstance:
       propertyPath: m_Size.y
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 4084516454846992979, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084516454846992979, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084516454846992979, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 814334268248760874}
+    - target: {fileID: 4084516454846992979, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_CallState
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084516454846992979, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: GoToMenu
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084516454846992979, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_TargetAssemblyTypeName
+      value: MenuFunctions, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 4084516454846992979, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+--- !u!114 &814334268248760874 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 4084516454846992978, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+  m_PrefabInstance: {fileID: 814334268248760873}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cc16427b055e3164297a1215105c9be9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
