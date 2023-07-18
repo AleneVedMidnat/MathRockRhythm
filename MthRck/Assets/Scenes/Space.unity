@@ -3223,6 +3223,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 814334268253734438, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
+      propertyPath: delayTime
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 814334268253734438, guid: a518399b15eda1b4ebe3589784e7359a, type: 3}
       propertyPath: playAudio
       value: 
       objectReference: {fileID: 872230166}

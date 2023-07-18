@@ -86,12 +86,12 @@ public class RhythmEventSystem : MonoBehaviour
 		switch (score)
 		{
 			case "worst":
-				playerHealth -= 2;
+				playerHealth -= 5;
 				worst++;
 				//FFFF00
 				break;
 			case "sad":
-				playerHealth -= 1;
+				playerHealth -= 3;
 				sad++;
 				//0000FF
 				break;
@@ -100,13 +100,13 @@ public class RhythmEventSystem : MonoBehaviour
 				//00FF00
 				break;
 			case "fine":
-				playerHealth += 1;
+				playerHealth += 0;
 				playerScore+= 1;
 				fine++;
 				//00FFFF
 				break;
 			case "cool":
-				playerHealth += 2;
+				playerHealth += 1;
 				playerScore += 2;
 				cool++;
 				//FF00FF

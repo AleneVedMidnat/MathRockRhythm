@@ -52,7 +52,7 @@ MonoBehaviour:
   lane4sprite: {fileID: 372551319, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
   audio: {fileID: 814334268950388931}
   playAudio: {fileID: 1056653276878287957}
-  delayTime: -0.055
+  delayTime: -0.6
   stopSong: 0
 --- !u!1 &814334268370739901
 GameObject:
