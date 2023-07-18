@@ -54,22 +54,27 @@ public class RhythmEventSystem : MonoBehaviour
 	public void Lane1(InputAction.CallbackContext context)
 	{
 		m_lane1.KeyPressed();
+		m_lane1.GetComponentInChildren<AudioSource>().Play();
 	}
 
 	public void Lane2(InputAction.CallbackContext context)
 	{
 		m_lane2.KeyPressed();
-	}
+        m_lane2.GetComponentInChildren<AudioSource>().Play();
+    }
 
 	public void Lane3(InputAction.CallbackContext context)
 	{
 		m_lane3.KeyPressed();
-	}
+        m_lane3.GetComponentInChildren<AudioSource>().Play();
+    }
 
 	public void Lane4(InputAction.CallbackContext context)
 	{
 		m_lane4.KeyPressed();
-	}
+        m_lane4.GetComponentInChildren<AudioSource>().Play();
+
+    }
 
 	#endregion
 

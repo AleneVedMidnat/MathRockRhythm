@@ -10,6 +10,7 @@ public class KeyController : MonoBehaviour
 	List<GameObject> activePucks;
 	public event System.Action<string> scoringEvent; //Cool, Fine, Safe, Sad, Worst
 	SpriteRenderer m_spriteRenderer;
+	[SerializeField] ParticleSystem particleEffect;
 
 	void OnEnable()
     {
@@ -39,7 +40,8 @@ public class KeyController : MonoBehaviour
 		{
 			//check how far from the tagret it was and return the 
 			float distanceAway = (activePucks[0].transform.position- transform.position).magnitude;
-			Destroy(activePucks[0]);
+            Instantiate(particleEffect, activePucks[0].transform.position, Quaternion.identity);
+            Destroy(activePucks[0]);
 			if (4.0f < distanceAway && distanceAway <= 5f)
 			{
 				scoringEvent?.Invoke("worst");

@@ -52,7 +52,7 @@ MonoBehaviour:
   lane4sprite: {fileID: 372551319, guid: 66617a1fde4932a4d8ca4cdb92840c3b, type: 3}
   audio: {fileID: 814334268950388931}
   playAudio: {fileID: 1056653276878287957}
-  delayTime: 0
+  delayTime: -0.055
   stopSong: 0
 --- !u!1 &814334268370739901
 GameObject:
@@ -112,8 +112,6 @@ MonoBehaviour:
   m_lane2: {fileID: 8937297984824985560}
   m_lane3: {fileID: 8937297984065871823}
   m_lane4: {fileID: 8937297983572039198}
-  m_achievementText: {fileID: 0}
-  gameplayUI: {fileID: 0}
   scoreUI: {fileID: 4084516454257439543}
   backgroundAudio: {fileID: 814334268950388931}
   healthbar: {fileID: 2462240241275697234}
@@ -540,6 +538,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 814334268370739900}
     m_Modifications:
+    - target: {fileID: -627493923286175113, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
+      propertyPath: particleEffect
+      value: 
+      objectReference: {fileID: 1664810852190647744, guid: c635dcb774a7d6f45abd1104370ad783, type: 3}
     - target: {fileID: 3276413214827334221, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -621,6 +623,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 814334268370739900}
     m_Modifications:
+    - target: {fileID: -627493923286175113, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
+      propertyPath: particleEffect
+      value: 
+      objectReference: {fileID: 1664810852190647744, guid: c635dcb774a7d6f45abd1104370ad783, type: 3}
     - target: {fileID: 3276413214827334221, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -702,6 +708,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 814334268370739900}
     m_Modifications:
+    - target: {fileID: -627493923286175113, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
+      propertyPath: particleEffect
+      value: 
+      objectReference: {fileID: 1664810852190647744, guid: c635dcb774a7d6f45abd1104370ad783, type: 3}
     - target: {fileID: 3276413214827334221, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -1014,6 +1024,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 814334268370739900}
     m_Modifications:
+    - target: {fileID: -627493923286175113, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
+      propertyPath: particleEffect
+      value: 
+      objectReference: {fileID: 1664810852190647744, guid: c635dcb774a7d6f45abd1104370ad783, type: 3}
     - target: {fileID: 3276413214827334221, guid: 09e5cddf89fa5ba4e9bd2bddf6b038e5, type: 3}
       propertyPath: m_RootOrder
       value: 1

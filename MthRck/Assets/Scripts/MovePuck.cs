@@ -18,10 +18,15 @@ public class MovePuck : MonoBehaviour
 		transform.position = new Vector3(transform.position.x, transform.position.y - movementSpeed, transform.position.z);
 	}
 
-	private void OnDestroy()
-	{
-		Instantiate(particleEffect, transform.position, Quaternion.identity);
-	}
+	//private void OnDestroy()
+	//{
+	//	SpawnParticle();
+	//}
+
+	//private void SpawnParticle()
+	//{
+ //       Instantiate(particleEffect, transform.position, Quaternion.identity);
+ //   }
 
 	private void EndSong(bool end)
 	{
